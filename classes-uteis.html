@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/foundation.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <title>Aula de Fundation</title>
+  <style>
+    .panel {
+      background-color: #ccc;
+    }
+
+    button.radius, .button.radius {
+      border-radius: 3px;
+    }
+
+    button.round, .button.round {
+      border-radius: 1000px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Foundation para Iniciantes</h1>
+  <h2>Aula 03 - Classes úteis</h2>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <p class="panel">
+        <strong class="show-for-small-only">Visível somente para telas small</strong><br>
+        <strong class="show-for-medium-only">Visível somente para telas medium</strong><br>
+        <strong class="show-for-large-only">Visível somente para telas large</strong><br>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <p class="panel">
+        <strong class="show-for-small">Visível para telas small ou +</strong><br>
+        <strong class="show-for-medium">Visível para telas medium ou +</strong><br>
+        <strong class="show-for-large">Visível para telas large ou +</strong><br>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <p class="panel">
+        <strong class="hide-for-small-only">Oculta somente para telas small</strong><br>
+        <strong class="hide-for-medium-only">Oculta somente para telas medium</strong><br>
+        <strong class="hide-for-large-only">Oculta somente para telas large</strong><br>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <p class="panel">
+        <strong class="">Oculto para telas small ou +</strong><br>
+        <strong class="hide-for-medium">Oculto para telas medium ou +</strong><br>
+        <strong class="hide-for-large">Oculto para telas large ou +</strong><br>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <p class="panel">
+        <div class="callout clearfix">
+          <a class="button float-left radius">Left</a>
+          <a class="button float-right round">Right</a>
+        </div>
+    </div>
+  </div>
+
+  <p class="text-right">Lorem ipsum dot nam nesciunt, cumque sit reiciendis, quam perferendis consequatur!</p> <br>
+  <p class="text-left">Lorem ipsum dol nam nesciunt, cumque sit reiciendis, quam perferendis consequatur!</p> <br>
+  <p class="text-center">Lorem ipsum dit nam nesciunt, cumque sit reiciendis, quam perferendis consequatur!</p> <br>
+  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ratione, doloremque laborum explicabo autem maxime corporis a soluta dolorem minima repellendus est laboriosam dolores voluptas molestias expedita pariatur asperiores optio. ipsum rit nam nesciunt, cumque sit reiciendis, quam perferendis consequatur!</p> <br>
+
+  <div class="row small-up-1 medium-up-3 large-up-4">
+    <div class="column">
+      <img src="//placehold.it/300x300" class="thumbnail" alt="">
+    </div>
+    <div class="column">
+      <img src="//placehold.it/300x300" class="thumbnail" alt="">
+    </div>
+    <div class="column">
+      <img src="//placehold.it/300x300" class="thumbnail" alt="">
+    </div>
+    <div class="column">
+      <img src="//placehold.it/300x300" class="thumbnail" alt="">
+    </div>
+  </div>
+
+
+  <div class="callout warning">
+    <p>A classe radius e round não existe no Foundation 6, utilize o seguinte código:</p>
+        <pre>
+
+        button.radius, .button.radius {
+          border-radius: 3px;
+        }
+
+        button.round, .button.round {
+          border-radius: 1000px;
+        }
+        </pre>
+  </div>
+
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/foundation.js"></script>
+<script>
+  $(document).foundation();
+</script>
+</body>
+</html>
