@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/foundation.min.css">
+  <!-- Insert this within your head tag and after foundation.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
   <link rel="stylesheet" href="css/app.css">
   <title>Aula de Fundation</title>
 </head>
@@ -11,23 +13,26 @@
   <h2>Aula 05 - Formulários</h2>
   <div class="row">
     <div class="large-6 columns large-centered">
-      <form action="">
+      <form action="" data-abide novalidate >
         <div class="row">
           <div class="large-12 columns">
-            <label for="">
-              <input type="text" placeholder="Input padrão" />
+            <label for=""> Seu nome:
+              <input type="text" placeholder="Input padrão" required />
+              <spam class="form-error">Este campo é obrigatório</spam>
             </label>
           </div>
         </div>
         <div class="row">
           <div class="large-6 columns">
-            <label for="">
-              <input type="text"  placeholder="Input padrão" >
+            <label for=""> E-mail:
+              <input type="text"  placeholder="Input padrão" required pattern="email" />
+              <spam class="form-error">Informe um e-mail válido</spam>
             </label>
           </div>
           <div class="large-6 columns">
-            <label for="">
-              <input type="text"  placeholder="Input padrão" >
+            <label for="">Site:
+              <input type="text"  placeholder="Input padrão" required pattern="url" >
+              <spam class="form-error">Url invalid</spam>
             </label>
           </div>
         </div>
@@ -57,23 +62,44 @@
         </div>
 
         <div class="row">
-          
+          <div class="large-12 columns">
+            <div class="input-group">
+              <span class="input-group-label">$</span>
+              <input type="number" class="input-group-field" />
+              <div class="input-group-button">
+                <input type="submit" class="button" value="Submit">
+              </div>
+            </div>
+          </div>
+          <div class="large-12 columns">
+            <div class="input-group">
+              <div class="input-group-button">
+                <input type="submit" class="button" value="Submit">
+              </div>
+              <input type="number" class="input-group-field" />
+            </div>
+          </div>
         </div>
-
-        <div class="input-group">
-          <span class="input-group-label">$</span>
-          <input type="number" class="input-group-field" />
-          <div class="input-group-button">
-            <input type="submit" class="button" value="Submit">
+        <div class="row">
+          <div class="large-12 columns">
+            <input type="submit" value="Cadastrar" class="button">
           </div>
         </div>
 
-
-
-
-
-
-
+        <div class="row">
+          <div class="large-12 columns">
+            <div class="callout " data-closable >
+              <h3>Atenção!</h3>
+              <p>
+                A classe novalidate desabilita a funcionalidade do required padrão do html5 <br>
+                Para ativar data-clodable é necessário incluir o arquivo css motion-ui
+              </p>
+              <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
 
 
 
@@ -82,7 +108,6 @@
 
 
   </div>
-
 
 
 
